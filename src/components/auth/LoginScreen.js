@@ -59,7 +59,7 @@ export const LoginScreen = () => {
       {ensolverUser ? <Navigate replace to="/mynotes" /> : null}
       <div className="row">
         <div className="col-6 offset-3">
-          <h2 className="auth__title">Login Form</h2>
+          <h2>Login Form</h2>
           <form onSubmit={handleLogin}>
             <label className="form-label d-block mt-2">
               <span>User:</span>
@@ -74,6 +74,7 @@ export const LoginScreen = () => {
                 onChange={handleInputChange}
               />
             </label>
+            <br />
             <label className="form-label d-block mt-2">
               <span>Password:</span>
               <br />
@@ -86,8 +87,11 @@ export const LoginScreen = () => {
                 onChange={handleInputChange}
               />
             </label>
-
-            <button type="submit" className="btn btn-outline-primary btn-block">
+            <br />
+            <button
+              type="submit"
+              className="btn mt-2 btn-outline-primary btn-block"
+            >
               Login
             </button>
           </form>

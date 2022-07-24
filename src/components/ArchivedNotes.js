@@ -214,10 +214,12 @@ const ArchivedNotes = () => {
             {filteredarchivedNotes.map((note) => (
               <li className="list-group-item" key={note.id}>
                 <i className="fas fa-sticky-note"></i>
-                <p className="p-nota text-center">{note.title}</p>
-                <p className="p-nota text-center">
-                  Last edited: {note.lastEdited}
-                </p>
+                <div className="col-2">
+                  <p className="p-title p-nota text-center">{note.title}</p>
+                  <p className="p-nota muted text-center">
+                    Last edited: {note.lastEdited}
+                  </p>
+                </div>
                 <button
                   onClick={() => handleUnarchive(note.id)}
                   className="btn btn-secondary"
